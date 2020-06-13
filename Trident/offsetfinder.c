@@ -164,6 +164,7 @@ t_target_environment info_to_target_environment(const char *device_model, const 
     determineTarget("iPad3,6", "9.3.2", iPad36_iOS932);
     determineTarget("iPad3,6", "9.3.3", iPad36_iOS933);
     determineTarget("iPad3,6", "9.3.4", iPad36_iOS934);
+    determineTarget("iPod5,1", "8.4.1", iPod51_iOS841);
     determineTarget("iPod5,1", "9.1", iPod51_iOS910);
     determineTarget("iPod5,1", "9.2", iPod51_iOS920);
     determineTarget("iPod5,1", "9.2.1", iPod51_iOS921);
@@ -305,6 +306,7 @@ uint32_t find_OSSerializer_serialize(void) {
         case iPad36_iOS932: return 0x31ef58;
         case iPad36_iOS933: return 0x31f13c;
         case iPad36_iOS934: return 0x31f13c;
+        case iPod51_iOS841: return 0x2d4a1c;
         case iPod51_iOS910: return 0x319450;
         case iPod51_iOS920: return 0x3106fc;
         case iPod51_iOS921: return 0x3107fc;
@@ -443,6 +445,7 @@ uint32_t find_OSSymbol_getMetaClass(void) {
         case iPad36_iOS932: return 0x321818;
         case iPad36_iOS933: return 0x3219fc;
         case iPad36_iOS934: return 0x3219fc;
+        case iPod51_iOS841: return 0x2d6afc;
         case iPod51_iOS910: return 0x31bc3c;
         case iPod51_iOS920: return 0x312e18;
         case iPod51_iOS921: return 0x312f18;
@@ -581,6 +584,7 @@ uint32_t find_calend_gettime(void) {
         case iPad36_iOS932: return 0x1ee6c;
         case iPad36_iOS933: return 0x1eeac;
         case iPad36_iOS934: return 0x1eeac;
+        case iPod51_iOS841: return 0x1d0a0;
         case iPod51_iOS910: return 0x1db34;
         case iPod51_iOS920: return 0x1de84;
         case iPod51_iOS921: return 0x1de60;
@@ -718,6 +722,7 @@ uint32_t find_bufattr_cpx(void) {
         case iPad36_iOS932: return 0xdea48;
         case iPad36_iOS933: return 0xdea48;
         case iPad36_iOS934: return 0xdea48;
+        case iPod51_iOS841: return 0xc3718;
         case iPod51_iOS910: return 0xd97d0;
         case iPod51_iOS920: return 0xd8750;
         case iPod51_iOS921: return 0xd8750;
@@ -856,6 +861,7 @@ uint32_t find_clock_ops(void) {
         case iPad36_iOS932: return 0x40b428;
         case iPad36_iOS933: return 0x40b428;
         case iPad36_iOS934: return 0x40b428;
+        case iPod51_iOS841: return 0x3accdc;
         case iPod51_iOS910: return 0x4053cc;
         case iPod51_iOS920: return 0x3fc3dc;
         case iPod51_iOS921: return 0x3fc3dc;
@@ -994,6 +1000,7 @@ uint32_t find_copyin(void) {
         case iPad36_iOS932: return 0xcb7dc;
         case iPad36_iOS933: return 0xcb7dc;
         case iPad36_iOS934: return 0xcb7dc;
+        case iPod51_iOS841: return 0xb1744;
         case iPod51_iOS910: return 0xc7754;
         case iPod51_iOS920: return 0xc6754;
         case iPod51_iOS921: return 0xc6754;
@@ -1132,6 +1139,7 @@ uint32_t find_bx_lr(void) {
         case iPad36_iOS932: return 0xdea4a;
         case iPad36_iOS933: return 0xdea4a;
         case iPad36_iOS934: return 0xdea4a;
+        case iPod51_iOS841: return 0xc371a;
         case iPod51_iOS910: return 0xd97d2;
         case iPod51_iOS920: return 0xd8752;
         case iPod51_iOS921: return 0xd8752;
@@ -1270,6 +1278,7 @@ uint32_t find_write_gadget(void) {
         case iPad36_iOS932: return 0xcb508;
         case iPad36_iOS933: return 0xcb508;
         case iPad36_iOS934: return 0xcb508;
+        case iPod51_iOS841: return 0xb1488;
         case iPod51_iOS910: return 0xc7488;
         case iPod51_iOS920: return 0xc6488;
         case iPod51_iOS921: return 0xc6488;
@@ -1408,6 +1417,7 @@ uint32_t find_vm_kernel_addrperm(void) {
         case iPad36_iOS932: return 0x45d978;
         case iPad36_iOS933: return 0x45d978;
         case iPad36_iOS934: return 0x45d978;
+        case iPod51_iOS841: return 0x3f3128;
         case iPod51_iOS910: return 0x457030;
         case iPod51_iOS920: return 0x44e840;
         case iPod51_iOS921: return 0x44e840;
@@ -1546,6 +1556,7 @@ uint32_t find_kernel_pmap(void) {
         case iPad36_iOS932: return 0x3fe454;
         case iPad36_iOS933: return 0x3fe454;
         case iPad36_iOS934: return 0x3fe454;
+        case iPod51_iOS841: return 0x3a211c;
         case iPod51_iOS910: return 0x3f8444;
         case iPod51_iOS920: return 0x3ef444;
         case iPod51_iOS921: return 0x3ef444;
@@ -1684,6 +1695,7 @@ uint32_t find_flush_dcache(void) {
         case iPad36_iOS932: return 0xbf274;
         case iPad36_iOS933: return 0xbf404;
         case iPad36_iOS934: return 0xbf404;
+        case iPod51_iOS841: return 0xa6d10;
         case iPod51_iOS910: return 0xbcb7c;
         case iPod51_iOS920: return 0xbb710;
         case iPod51_iOS921: return 0xbb760;
@@ -1822,6 +1834,7 @@ uint32_t find_invalidate_tlb(void) {
         case iPad36_iOS932: return 0xcb560;
         case iPad36_iOS933: return 0xcb560;
         case iPad36_iOS934: return 0xcb560;
+        case iPod51_iOS841: return 0xb14e0;
         case iPod51_iOS910: return 0xc74e0;
         case iPod51_iOS920: return 0xc64e0;
         case iPod51_iOS921: return 0xc64e0;
@@ -1960,6 +1973,7 @@ uint32_t find_task_for_pid(void) {
         case iPad36_iOS932: return 0x302df0;
         case iPad36_iOS933: return 0x302fd4;
         case iPad36_iOS934: return 0x302fd4;
+        case iPod51_iOS841: return 0x2bbdd0;
         case iPod51_iOS910: return 0x2fe034;
         case iPod51_iOS920: return 0x2f55b4;
         case iPod51_iOS921: return 0x2f56c4;
@@ -2098,6 +2112,7 @@ uint32_t find_setreuid(void) {
         case iPad36_iOS932: return 0x2af5f8;
         case iPad36_iOS933: return 0x2af7b8;
         case iPad36_iOS934: return 0x2af7b8;
+        case iPod51_iOS841: return 0x26cb90;
         case iPod51_iOS910: return 0x2aa31c;
         case iPod51_iOS920: return 0x2a3ab4;
         case iPod51_iOS921: return 0x2a3bc4;
@@ -2236,6 +2251,7 @@ uint32_t find_setreuid_cred_update(void) {
         case iPad36_iOS932: return 0xe031;
         case iPad36_iOS933: return 0xe031;
         case iPad36_iOS934: return 0xe031;
+        case iPod51_iOS841: return 0xe03e;
         case iPod51_iOS910: return 0xe03e;
         case iPod51_iOS920: return 0xe031;
         case iPod51_iOS921: return 0xe031;
@@ -2374,6 +2390,7 @@ uint32_t find_pid_check(void) {
         case iPad36_iOS932: return 0x14;
         case iPad36_iOS933: return 0x14;
         case iPad36_iOS934: return 0x14;
+        case iPod51_iOS841: return 0x16;
         case iPod51_iOS910: return 0x16;
         case iPod51_iOS920: return 0x14;
         case iPod51_iOS921: return 0x14;
@@ -2512,6 +2529,7 @@ uint32_t find_posix_check(void) {
         case iPad36_iOS932: return 0x3e;
         case iPad36_iOS933: return 0x3e;
         case iPad36_iOS934: return 0x3e;
+        case iPod51_iOS841: return 0x3e;
         case iPod51_iOS910: return 0x40;
         case iPod51_iOS920: return 0x3e;
         case iPod51_iOS921: return 0x3e;
@@ -2650,6 +2668,7 @@ uint32_t find_mac_proc_check(void) {
         case iPad36_iOS932: return 0x1e6;
         case iPad36_iOS933: return 0x1e6;
         case iPad36_iOS934: return 0x1e6;
+        case iPod51_iOS841: return 0x222;
         case iPod51_iOS910: return 0x224;
         case iPod51_iOS920: return 0x1e6;
         case iPod51_iOS921: return 0x1e6;
